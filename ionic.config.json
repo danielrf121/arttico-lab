@@ -1,0 +1,7 @@
+{
+  "name": "arttico-lab",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
