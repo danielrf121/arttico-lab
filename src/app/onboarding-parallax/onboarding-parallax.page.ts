@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { SwiperComponent } from 'ngx-swiper-wrapper';
-import { NavController } from '@ionic/angular';
+import { NavController, Platform } from '@ionic/angular';
+import { Plugins, StatusBarStyle } from '@capacitor/core';
+
+const { StatusBar } = Plugins;
 
 @Component({
   selector: 'app-onboarding-parallax',
@@ -29,10 +32,18 @@ export class OnboardingParallaxPage implements OnInit {
   valueParallax = 0;
 
   constructor(
+    private platform: Platform,
     public navController: NavController
   ) { }
 
   ngOnInit() {
+    if (this.platform.is('capacitor')) {
+      if (this.platform.is('android')) {
+        console.log('android');
+        StatusBar.setStyle({ style: StatusBarStyle.Dark });
+        StatusBar.setBackgroundColor({ color: '#6C3284' });
+      }
+    }
   }
 
   /**

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Plugins, StatusBarStyle } from '@capacitor/core';
+import { Platform } from '@ionic/angular';
+
+const { StatusBar } = Plugins;
 
 @Component({
   selector: 'app-home',
@@ -9,10 +13,21 @@ import { Router } from '@angular/router';
 export class HomePage implements OnInit {
 
   constructor(
+    private platform: Platform,
     public router: Router
   ) { }
 
   ngOnInit() {
+  }
+
+  ionViewDidEnter() {
+    if (this.platform.is('capacitor')) {
+      if (this.platform.is('android')) {
+        console.log('android');
+        StatusBar.setStyle({ style: StatusBarStyle.Dark });
+        StatusBar.setBackgroundColor({ color: '#09ACD6' });
+      }
+    }
   }
 
   /**
