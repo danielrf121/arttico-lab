@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { OnboardingParallaxPage } from './onboarding-parallax.page';
 
 const routes: Routes = [

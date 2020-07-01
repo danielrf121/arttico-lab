@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { HomePageRoutingModule } from './home-routing.module';
 import { HomePage } from './home.page';
-import { CardLabComponentModule } from '../components/card-lab/card-lab.module';
+import { CardLabComponentModule } from '../../components/card-lab/card-lab.module';
 
 @NgModule({
   imports: [

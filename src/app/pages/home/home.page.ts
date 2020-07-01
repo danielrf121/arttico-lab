@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Plugins, StatusBarStyle } from '@capacitor/core';
 import { Platform } from '@ionic/angular';
-import { labs } from '../data/labs';
+import { labs } from '../../data/labs';
 
 const { StatusBar } = Plugins;
 
