@@ -34,7 +34,7 @@ export class AppComponent {
       if (this.platform.is('android')) {
         console.log('android');
         StatusBar.setStyle({ style: StatusBarStyle.Dark });
-        StatusBar.setBackgroundColor({ color: '#09ACD6' });
+        StatusBar.setBackgroundColor({ color: '#5765FD' });
       } else {
         console.log('ios');
         StatusBar.setStyle({ style: StatusBarStyle.Light });

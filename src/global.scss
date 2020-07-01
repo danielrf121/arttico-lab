@@ -51,6 +51,11 @@ $font-path: "./assets/fonts" !default;
 	src: url('#{$font-path}/bariol/Bariol_Bold.otf');
 }
 
+@font-face {
+	font-family: chonburiRegular;
+	src: url('#{$font-path}/chonburi/Chonburi_Regular.ttf');
+}
+
 // Onboarding Parallax
 swiper {
   z-index: 999;

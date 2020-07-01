@@ -1,0 +1,17 @@
+<ion-card>
+  <ion-card-content>
+    <ion-row>
+      <ion-col size="4" class="col-icon">
+        <div class="icon" [ngStyle]="{ 'background-image': 'url(' + lab?.icon + ')' }"></div>
+      </ion-col>
+      <ion-col size="6" class="col-tag">
+        <div class="tag">{{ lab?.category?.name }}</div>
+      </ion-col>
+    </ion-row>
+    <div class="box-info">
+      <h2>{{ lab?.description }}</h2>
+      <span class="name">{{ lab?.name }}</span>
+      <span class="date">{{ lab?.date }}</span>
+    </div>
+  </ion-card-content>
+</ion-card>

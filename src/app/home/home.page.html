@@ -1,11 +1,25 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Arttico Lab</ion-title>
+    <ion-title [ngStyle]="{ 'opacity': opacityTitleToolbar }">ARTTICO</ion-title>
+    <ion-buttons slot="end">
+      <div class="avatar"></div>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
- <ion-button (click)="navTo('onboarding-parallax-bichorama')">
-   Onboarding Parallax Bichorama
- </ion-button>
+<ion-content (ionScroll)="onScroll($event)" [scrollEvents]="true">
+  <div class="box-banner">
+    <div class="box-title" [ngStyle]="{ 'opacity': opacityTitleContent }">
+      <h1>ARTTICO</h1>
+      <span class="subtitle">Laboratório de design, micro-interações <br/>e produto.</span>
+    </div>
+  </div>
+
+  <div class="box-content">
+    <h3>Últimos trabalhos</h3>
+
+    <div class="list-labs">
+      <app-card-lab *ngFor="let lab of labs" [lab]="lab" (click)="navTo(lab.url)"></app-card-lab>
+    </div>
+  </div>
 </ion-content>
