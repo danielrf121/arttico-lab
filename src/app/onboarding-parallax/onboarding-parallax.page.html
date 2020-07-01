@@ -1,0 +1,78 @@
+<ion-content>
+  <div class="background" [ngStyle]="{ 'transform': 'translateX(' + valueParallax + 'px)' }"></div>
+
+  <swiper class="slide-onboarding" [config]="config" [(index)]="index" (progress)="onProgres($event)">
+    <div>
+      <div class="box-top">
+        <img src="assets/images/onboarding-parallax/onboarding-find.png" alt="onboarding-image">
+      </div>
+      <div class="box-bottom">
+        <div class="box-text">
+          <h1>Encontre</h1>
+          <p>Não perca tempo. Temos o que você precisa bem aqui pertinho.</p>
+        </div>
+        <ion-button class="button-skip" (click)="next()">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+    <div>
+      <div class="box-top">
+        <img src="assets/images/onboarding-parallax/onboarding-pets.png" alt="onboarding-image">
+      </div>
+      <div class="box-bottom">
+        <div class="box-text">
+          <h1>Seu pet</h1>
+          <p>Cadastre seus pets e tenha IDs personalizadas, cartão de saúde e outras facilidades. </p>
+        </div>
+        <ion-button class="button-skip" (click)="next()">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+    <div>
+      <div class="box-top">
+        <img src="assets/images/onboarding-parallax/onboarding-health.png" alt="onboarding-image">
+      </div>
+      <div class="box-bottom">
+        <div class="box-text">
+          <h1>Saúde</h1>
+          <p>Registre vacinas, medicamentos, peso e muito mais no nosso cartão de saúde digital.</p>
+        </div>
+        <ion-button class="button-skip" (click)="next()">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+    <div>
+      <div class="box-top">
+        <img src="assets/images/onboarding-parallax/onboarding-shopping.png" alt="onboarding-image">
+      </div>
+      <div class="box-bottom">
+        <div class="box-text">
+          <h1>Compre</h1>
+          <p>Peça aqui tudo o que o seu pet precisa, sem sair de casa.</p>
+        </div>
+        <ion-button class="button-skip" (click)="next()">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+    <div>
+      <div class="box-top">
+        <img src="assets/images/onboarding-parallax/onboarding-adoption.png" alt="onboarding-image">
+      </div>
+      <div class="box-bottom">
+        <div class="box-text">
+          <h1>Adote</h1>
+          <p>Conheça no Bichorama o seu novo melhor amigo.</p>
+        </div>
+        <ion-button class="button-skip" (click)="skip()">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </swiper>
+
+  <img src="assets/images/onboarding-parallax/logo_light.png" alt="logo" class="logo-min-light">
+</ion-content>

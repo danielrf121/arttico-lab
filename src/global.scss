@@ -24,3 +24,54 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+// Fonte Path
+$font-path: "./assets/fonts" !default;
+
+@font-face {
+  font-family: 'haydonbrush';
+  src: url('#{$font-path}/haydonbrush/haydonbrush.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Fonte Bariol
+@font-face {
+	font-family: bariolLight;
+	src: url('#{$font-path}/bariol/Bariol_Light.otf');
+}
+
+@font-face {
+	font-family: bariolRegular;
+	src: url('#{$font-path}/bariol/Bariol_Regular.otf');
+}
+
+@font-face {
+	font-family: bariolBold;
+	src: url('#{$font-path}/bariol/Bariol_Bold.otf');
+}
+
+// Onboarding Parallax
+swiper {
+  z-index: 999;
+  position: relative;
+}
+
+.swiper-container {
+  z-index: 999 !important;
+  position: relative !important;
+}
+
+.slide-onboarding {
+  height: 100%;
+
+  .swiper-pagination {
+    height: 10px !important;
+    top: auto !important;
+    bottom: 0px !important;
+
+    .swiper-pagination-progressbar-fill {
+      background-color: #FF6700;
+    }
+  }
+}

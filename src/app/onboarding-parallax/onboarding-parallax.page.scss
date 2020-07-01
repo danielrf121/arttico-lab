@@ -1,0 +1,87 @@
+ion-content {
+  --background: #6C3284;
+}
+
+.background {
+  width: 160%;
+  height: 100%;
+  z-index: 99;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  background-image: url('../../assets/images/onboarding-parallax/bg-pattern-roxo.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.3s;
+}
+
+.logo-min-light {
+  width: 90px;
+  top: 40px;
+  left: 10px;
+  z-index: 9999;
+  position: absolute;
+}
+
+.box-top {
+  width: 100%;
+}
+
+.box-bottom {
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  padding: 0px 80px 50px 20px;
+  position: absolute;
+
+  h1 {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-size: 28px;
+    font-family: bariolBold;
+    display: block;
+    text-align: left;
+    color: #FFFFFF;
+  }
+
+  p {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+    display: block;
+    text-align: left;
+    color: #FFFFFF;
+  }
+}
+
+.button-skip {
+  width: 52px;
+  height: 52px;
+  bottom: 48px;
+  right: 16px;
+  padding: 0px;
+  z-index: 999;
+  position: absolute;
+  text-transform: none;
+  box-shadow: none;
+  --border-radius: 50%;
+  --box-shadow: none;
+  --background: #FF6700;
+  --background-activated: #FF6700;
+  --background-focused: #FF6700;
+  --background-hover: #FF6700;
+
+  .icon {
+    font-size: 20px;
+  }
+}
+
+// iPhoneX and Galaxy Plus
+@media (min-height: 800px) {
+  .box-top {
+    margin-top: 100px;
+  }
+}
