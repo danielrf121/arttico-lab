@@ -1,6 +1,6 @@
 {
   "appId": "br.com.artticolab",
-  "appName": "arttico-lab",
+  "appName": "Arttico Lab",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
