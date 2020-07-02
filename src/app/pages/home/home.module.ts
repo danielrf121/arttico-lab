@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { HomePageRoutingModule } from './home-routing.module';
 import { HomePage } from './home.page';
 import { CardLabComponentModule } from '../../components/card-lab/card-lab.module';
+import { ProfilePageModule } from '../modals/profile/profile.module';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { CardLabComponentModule } from '../../components/card-lab/card-lab.modul
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    CardLabComponentModule
+    CardLabComponentModule,
+    ProfilePageModule
   ],
   declarations: [HomePage]
 })

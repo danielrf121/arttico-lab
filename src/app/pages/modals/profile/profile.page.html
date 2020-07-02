@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()" class="button-close">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="box-banner"></div>
+  <div class="box-avatar">
+    <div class="avatar"></div>
+  </div>
+  <div class="box-info">
+    <h1>Daniel Rodrigues</h1>
+    <span class="office">Front-end Developer</span>
+  </div>
+  <div class="box-text">
+    <p>
+      Este é um projeto extensão do meu portfólio e estudos na área de desenvolvimento mobile.
+      Veja aqui conceitos de design, micro-interações, animações e cases de interface criadas por mim.
+    </p>
+  </div>
+  <div class="box-links">
+    <h3>Portfólio</h3>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button class="button-email" (click)="linkedin()">
+          <ion-icon name="logo-linkedin"></ion-icon>
+          Linkedin
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button class="button-email" (click)="behance()">
+          <ion-icon name="logo-behance"></ion-icon>
+          Behance
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="box-skills">
+    <h3>Skills</h3>
+    <div class="box-tags">
+      <div class="tag">web design</div>
+      <div class="tag">mobile developer</div>
+      <div class="tag">front-end developer</div>
+      <div class="tag">html</div>
+      <div class="tag">css</div>
+      <div class="tag">ionic</div>
+      <div class="tag">javascript</div>
+      <div class="tag">react-js</div>
+      <div class="tag">ui/ux</div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="box-button">
+    <ion-button class="button-email" (click)="sendEmail()">
+      <ion-icon name="mail-outline"></ion-icon>
+      Envie uma mensagem
+    </ion-button>
+  </div>
+</ion-footer>

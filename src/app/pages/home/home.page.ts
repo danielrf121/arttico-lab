@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Plugins, StatusBarStyle } from '@capacitor/core';
-import { Platform } from '@ionic/angular';
+import { Platform, ModalController } from '@ionic/angular';
 import { labs } from '../../data/labs';
+import { ProfilePage } from '../modals/profile/profile.page';
 
 const { StatusBar } = Plugins;
 
@@ -26,6 +27,7 @@ export class HomePage implements OnInit {
 
   constructor(
     private platform: Platform,
+    private modalController: ModalController,
     public router: Router
   ) { }
 
@@ -69,5 +71,16 @@ export class HomePage implements OnInit {
    */
   navTo(url: string) {
     this.router.navigate([url]);
+  }
+
+  /**
+   * Abrir perfil
+   */
+  async openProfile() {
+    const modal = await this.modalController.create({
+      component: ProfilePage,
+    });
+
+    await modal.present();
   }
 }
