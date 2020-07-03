@@ -1,0 +1,171 @@
+<ion-content>
+  <div class="v-align">
+    <div class="container-calendar">
+      <div class="calendar-header">
+        <ion-row>
+          <ion-col size="8" class="col-info">
+            <span class="title-calendar" (click)="openSelectMonth()">{{ currentMonth.name }}</span>
+            <span class="subtitle-calendar" (click)="openSelectYear()">{{ currentYear }}</span>
+          </ion-col>
+          <ion-col size="2" (click)="goToLastMonth()" class="col-arrow">
+            <div class="button-arrow" *ngIf="!selectingMonth && !selectingYear">
+              <ion-icon name="chevron-back-outline"></ion-icon>
+            </div>
+          </ion-col>
+          <ion-col size="2" (click)="goToNextMonth()" class="col-arrow">
+            <div class="button-arrow" *ngIf="!selectingMonth && !selectingYear">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="select-month" *ngIf="selectingMonth">
+        <span class="title-select">Selecionar mês</span>
+        <ion-row>
+          <ion-col size="6" (click)="selectMonth(01)">
+            <span class="number">01</span>
+            <span class="name">Janeiro</span>
+          </ion-col>
+          <ion-col size="6" (click)="selectMonth(02)">
+            <span class="number">02</span>
+            <span class="name">Fevereiro</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6" (click)="selectMonth(03)">
+            <span class="number">03</span>
+            <span class="name">Março</span>
+          </ion-col>
+          <ion-col size="6" (click)="selectMonth(04)">
+            <span class="number">04</span>
+            <span class="name">Abril</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6" (click)="selectMonth(05)">
+            <span class="number">05</span>
+            <span class="name">Maio</span>
+          </ion-col>
+          <ion-col size="6" (click)="selectMonth(06)">
+            <span class="number">06</span>
+            <span class="name">Junho</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6" (click)="selectMonth(07)">
+            <span class="number">07</span>
+            <span class="name">Julho</span>
+          </ion-col>
+          <ion-col size="6" (click)="selectMonth(08)">
+            <span class="number">08</span>
+            <span class="name">Agosto</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6" (click)="selectMonth(09)">
+            <span class="number">09</span>
+            <span class="name">Setembro</span>
+          </ion-col>
+          <ion-col size="6" (click)="selectMonth(10)">
+            <span class="number">10</span>
+            <span class="name">Outubro</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6" (click)="selectMonth(11)">
+            <span class="number">11</span>
+            <span class="name">Novembro</span>
+          </ion-col>
+          <ion-col size="6" (click)="selectMonth(12)">
+            <span class="number">12</span>
+            <span class="name">Dezembro</span>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="select-year" *ngIf="selectingYear">
+        <span class="title-select">Selecionar ano</span>
+        <ion-row class="row-prev-next">
+          <ion-col size="6" (click)="prevPageYear()" class="col-arrow">
+            <div class="button-arrow">
+              <ion-icon name="chevron-back-outline"></ion-icon>
+            </div>
+          </ion-col>
+          <ion-col size="6" (click)="nextPageYear()" class="col-arrow">
+            <div class="button-arrow">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <div class="box-years">
+          <div class="box-year" *ngFor="let year of selectYearList" (click)="selectYear(year)" [class.selected]="selectYearCurrent === year">
+            <span>{{ year }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="calendar-body" *ngIf="!selectingMonth && !selectingYear">
+        <div class="calendar-weekday">
+          <div class="col-date">Dom</div>
+          <div class="col-date">Seg</div>
+          <div class="col-date">Ter</div>
+          <div class="col-date">Qua</div>
+          <div class="col-date">Qui</div>
+          <div class="col-date">Sex</div>
+          <div class="col-date">Sab</div>
+        </div>
+        <div class="calendar-dates">
+          <div *ngFor="let lastDay of daysInLastMonth" class="col-date last-month">
+            <div class="content-day">
+              <span>{{ lastDay }}</span>
+            </div>
+          </div>
+          <div
+            class="col-date current-month"
+            *ngFor="let day of daysInThisMonth"
+            (click)="changeDay(day)"
+            [class.current-date]="currentDate === day.day"
+            [class.start-date]="day.startDate"
+            [class.end-date]="day.endDate"
+            [class.selected]="day.selected"
+            [class.disabled]="day.disabled"
+          >
+            <div class="content-day">
+              <div class="box-label">
+                <span>{{ day.day }}</span>
+              </div>
+            </div>
+          </div>
+          <div *ngFor="let nextDay of daysInNextMonth" class="col-date next-month">
+            <div class="content-day">
+              <div class="box-label">
+                <span>{{ nextDay }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box-buttons" *ngIf="!readonly" [class.disabled]="selectingMonth || selectingYear">
+        <ion-row>
+          <ion-col size="6">
+            <ion-button class="button-default-grey" (click)="cancel()">
+              Cancelar
+            </ion-button>
+          </ion-col>
+          <ion-col size="6">
+            <ion-button class="button-default" (click)="done()">
+              Selecionar
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="box-buttons" *ngIf="readonly">
+        <ion-button class="button-default" (click)="cancel()">
+          Continuar
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

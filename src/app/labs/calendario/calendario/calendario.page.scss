@@ -1,0 +1,39 @@
+ion-header {
+  border: none;
+
+  &:after {
+    display: none;
+  }
+
+  ion-toolbar {
+    padding: 8px;
+    --background: transparent;
+
+    ion-title {
+      color: var(--ion-color-white);
+    }
+  }
+
+  ion-button {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    --border-radius: 50%;
+    --color: var(--ion-color-white);
+    --background: rgba(255,255,255,0.1);
+  }
+}
+
+.container-calendar {
+  margin-top: -100px;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  background: rgba(84,160,232,1);
+  background: -moz-linear-gradient(-45deg, rgba(84,160,232,1) 0%, rgba(35,107,184,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(84,160,232,1)), color-stop(100%, rgba(35,107,184,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(84,160,232,1) 0%, rgba(35,107,184,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(84,160,232,1) 0%, rgba(35,107,184,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(84,160,232,1) 0%, rgba(35,107,184,1) 100%);
+  background: linear-gradient(135deg, rgba(84,160,232,1) 0%, rgba(35,107,184,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54a0e8', endColorstr='#236bb8', GradientType=1 );
+}

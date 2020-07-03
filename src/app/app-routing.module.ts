@@ -10,6 +10,10 @@ const routes: Routes = [
     path: 'onboarding-parallax-bichorama',
     loadChildren: () => import('./labs/onboarding-parallax/onboarding-parallax.module').then( m => m.OnboardingParallaxPageModule)
   },
+  {
+    path: 'calendario',
+    loadChildren: () => import('./labs/calendario/calendario/calendario.module').then( m => m.CalendarioPageModule)
+  },
 ];
 @NgModule({
   imports: [

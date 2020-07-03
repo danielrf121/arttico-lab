@@ -1,0 +1,20 @@
+ion-list {
+  padding-top: 0px;
+
+  ion-item {
+    --inner-padding-start: 16px;
+    --padding-start: 0px;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --inner-padding-top: 6px;
+    --inner-padding-bottom: 6px;
+
+    &.current {
+      --color: var(--ion-color-primary);
+
+      ion-label {
+        font-family: bariolBold;
+      }
+    }
+  }
+}

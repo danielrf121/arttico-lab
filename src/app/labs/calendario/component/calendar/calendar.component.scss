@@ -1,0 +1,142 @@
+.container-calendar {
+  width: 330px;
+  margin: 0 auto;
+}
+
+.calendar-header {
+  width: 100%;
+  padding: 4px 0px;
+
+  .title-calendar {
+    width: 100%;
+    font-size: 20px;
+    text-align: left;
+    display: block;
+    text-transform: uppercase;
+    color: var(--ion-color-grey-500);
+  }
+
+  .subtitle-calendar {
+    width: 100%;
+    font-size: 15px;
+    text-align: left;
+    display: block;
+    text-transform: uppercase;
+    font-family: bariolBold;
+    color: var(--ion-color-grey-700);
+  }
+
+  ion-row {
+    ion-col {
+      padding: 2px;
+
+      &.col-info {
+        width: calc(100% - 88px) !important;
+        min-width: calc(100% - 88px) !important;
+        max-width: calc(100% - 88px) !important;
+      }
+
+      &.col-arrow {
+        width: 44px !important;
+        min-width: 44px !important;
+        max-width: 44px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .button-arrow {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.calendar-body {
+  width: 100%;
+
+  .calendar-weekday {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    background-color: transparent;
+
+    .col-date {
+      width: 14.28%;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-items: center;
+      justify-content: center;
+      font-family: bariolBold;
+      color: var(--ion-color-grey-800);
+    }
+  }
+
+  .calendar-dates {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+
+    .col-date {
+      width: 14.28%;
+      height: 42px;
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+
+      .content-day {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &.last-month {
+        opacity: 0.2;
+      }
+
+      &.next-month {
+        opacity: 0.2;
+      }
+
+      &.disabled {
+        opacity: 0.2;
+      }
+
+      &.current-date {
+        .content-day {
+          color: var(--ion-color-white);
+          background-color: var(--ion-color-primary);
+          transition: background-color 0.3s, color 0.3s;
+        }
+      }
+
+      &.selected {
+        .content-day {
+          color: var(--ion-color-white);
+          background-color: var(--ion-color-secondary);
+          transition: background-color 0.3s, color 0.3s;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .container-calendar {
+    width: 294px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Selecionar ano</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let year of years" (click)="select(year)" [class.current]="year === currentYear" id="{{ year }}">
+      <ion-label>{{ year }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
