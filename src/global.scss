@@ -80,3 +80,34 @@ swiper {
     }
   }
 }
+
+// Styles gerais
+// --------------------------------------------------
+.v-align {
+  width: 100%;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+// Forçando modal 100%
+// --------------------------------------------------
+ion-modal {
+  --width: 100% !important;
+  --height: 100% !important;
+  --min-width: 100%;
+  --min-height: 100%;
+}
+
+.modal-wrapper {
+  background: transparent !important;
+}
+
+.modal-calendar {
+  padding: 20px 14px;
+
+  .modal-wrapper {
+    border-radius: 20px;
+  }
+}

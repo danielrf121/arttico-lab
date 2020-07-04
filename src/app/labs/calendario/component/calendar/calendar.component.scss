@@ -1,5 +1,6 @@
 .container-calendar {
-  width: 330px;
+  width: 100%;
+  padding: 0px 16px;
   margin: 0 auto;
 }
 
@@ -13,7 +14,7 @@
     text-align: left;
     display: block;
     text-transform: uppercase;
-    color: var(--ion-color-grey-500);
+    color: var(--ion-color-white);
   }
 
   .subtitle-calendar {
@@ -22,8 +23,8 @@
     text-align: left;
     display: block;
     text-transform: uppercase;
-    font-family: bariolBold;
-    color: var(--ion-color-grey-700);
+    font-weight: bold;
+    color: var(--ion-color-white);
   }
 
   ion-row {
@@ -51,7 +52,8 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: transparent;
+          background-color: rgba(255,255,255,0.1);
+          color: var(--ion-color-white);
         }
       }
     }
@@ -75,8 +77,8 @@
       justify-content: center;
       align-items: center;
       justify-content: center;
-      font-family: bariolBold;
-      color: var(--ion-color-grey-800);
+      font-weight: bold;
+      color: var(--ion-color-white);
     }
   }
 
@@ -101,6 +103,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        color: var(--ion-color-white);
       }
 
       &.last-month {
@@ -126,7 +129,7 @@
       &.selected {
         .content-day {
           color: var(--ion-color-white);
-          background-color: var(--ion-color-secondary);
+          background-color: rgba(0,0,0,0.2);
           transition: background-color 0.3s, color 0.3s;
         }
       }

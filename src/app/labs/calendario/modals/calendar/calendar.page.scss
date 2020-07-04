@@ -7,7 +7,7 @@ ion-content {
   margin: 0 auto;
   padding: 18px;
   border-radius: 20px;
-  background-color: transparent;
+  background-color: var(--ion-color-white);
 }
 
 .calendar-header {
@@ -29,7 +29,7 @@ ion-content {
     text-align: left;
     display: block;
     text-transform: uppercase;
-    font-family: bariolBold;
+    font-weight: bold;
     color: var(--ion-color-grey-700);
   }
 
@@ -58,7 +58,7 @@ ion-content {
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: transparent;
+          background-color: rgba(0,0,0,0.05);
         }
       }
     }
@@ -74,8 +74,8 @@ ion-content {
     font-size: 18px;
     text-align: left;
     display: block;
-    font-family: bariolBold;
-    color: var(--ion-color-secondary);
+    font-weight: bold;
+    color: var(--ion-color-tertiary-light);
   }
 
   ion-row {
@@ -91,8 +91,8 @@ ion-content {
         z-index: 99;
         position: absolute;
         display: block;
-        font-family: bariolBold;
-        color: var(--ion-color-secondary-light);
+        font-weight: bold;
+        color: var(--ion-color-tertiary-light);
       }
 
       .name {
@@ -103,7 +103,7 @@ ion-content {
         z-index: 999;
         display: block;
         position: relative;
-        font-family: bariolBold;
+        font-weight: bold;
         color: var(--ion-color-grey-700);
       }
     }
@@ -120,8 +120,8 @@ ion-content {
     font-size: 18px;
     text-align: left;
     display: block;
-    font-family: bariolBold;
-    color: var(--ion-color-secondary);
+    font-weight: bold;
+    color: var(--ion-color-tertiary);
   }
 
   .row-prev-next {
@@ -177,7 +177,7 @@ ion-content {
         width: 100%;
         text-align: center;
         display: block;
-        font-family: bariolBold;
+        font-weight: bold;
         color: var(--ion-color-grey-700);
       }
     }
@@ -202,7 +202,7 @@ ion-content {
       justify-content: center;
       align-items: center;
       justify-content: center;
-      font-family: bariolBold;
+      font-weight: bold;
       color: var(--ion-color-grey-800);
     }
   }
@@ -253,7 +253,7 @@ ion-content {
       &.selected {
         .content-day {
           color: var(--ion-color-white);
-          background-color: var(--ion-color-secondary);
+          background-color: var(--ion-color-tertiary);
           transition: background-color 0.3s, color 0.3s;
         }
       }
@@ -266,6 +266,44 @@ ion-content {
 
   ion-button {
     width: 100%;
+  }
+
+  .button-default {
+    width: 100%;
+    height: 46px;
+    margin: 0px;
+    font-size: 15px;
+    text-transform: none;
+    font-weight: bold;
+    --padding-start: 22px;
+    --padding-end: 22px;
+    --border-radius: 30px;
+    --color: var(--ion-color-white);
+    --color-activated: var(--ion-color-white);
+    --background: var(--ion-color-primary);
+    --background-activated: var(--ion-color-primary);
+    --background-focused: var(--ion-color-primary);
+    --background-hover: var(--ion-color-primary);
+    --box-shadow: none;
+  }
+
+  .button-default-grey {
+    width: 100%;
+    height: 46px;
+    margin: 0px;
+    font-size: 15px;
+    text-transform: none;
+    font-weight: bold;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --border-radius: 30px;
+    --color: var(--ion-color-grey-700);
+    --color-activated: var(--ion-color-grey-700);
+    --background: var(--ion-color-grey-200);
+    --background-activated: transparent;
+    --background-focused: transparent;
+    --background-hover: transparent;
+    --box-shadow: none;
   }
 
   &.disabled {

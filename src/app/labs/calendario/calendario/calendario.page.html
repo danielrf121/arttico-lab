@@ -18,14 +18,16 @@
     <ion-row>
       <ion-col size="6">
         <div class="button-datepicker" (click)="selectDate('start')">
-          <span>Data de início</span>
-          <span>{{ dateStartFormated | dateBr }}</span>
+          <ion-icon name="calendar-outline"></ion-icon>
+          <span class="label">Data início</span>
+          <span class="value">{{ dateStartFormated | dateBr }}</span>
         </div>
       </ion-col>
       <ion-col size="6">
         <div class="button-datepicker" (click)="selectDate('end')">
-          <span>Data final</span>
-          <span>{{ dateEndFormated | dateBr }}</span>
+          <ion-icon name="calendar-outline"></ion-icon>
+          <span class="label">Data fim</span>
+          <span class="value">{{ dateEndFormated | dateBr }}</span>
         </div>
       </ion-col>
     </ion-row>

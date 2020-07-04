@@ -61,6 +61,12 @@ export class CalendarComponent implements OnInit {
   rangeDates: any;
   rangeDatesComplete: any;
 
+  /**
+   * Tamanho da grid do calendario
+   */
+  gridCalendar: any;
+  heightDate: any;
+
   constructor(
     public modalController: ModalController
   ) { }
@@ -80,6 +86,11 @@ export class CalendarComponent implements OnInit {
       // Se não tiver data populada, abrir o calendário no mes corrente
       this.getDaysOfMonth();
     }
+
+    setTimeout(() => {
+      this.gridCalendar = document.getElementById('calendar-dates');
+      this.heightDate = this.gridCalendar.offsetWidth / 7;
+    });
   }
 
   /**

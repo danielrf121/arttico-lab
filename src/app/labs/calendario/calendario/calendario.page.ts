@@ -30,7 +30,6 @@ export class CalendarioPage implements OnInit {
   async selectDate(type: string) {
     const modal = await this.modalController.create({
       component: CalendarPage,
-      cssClass: 'modal-calendar'
     });
 
     modal.present();

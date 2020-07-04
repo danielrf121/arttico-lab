@@ -28,12 +28,58 @@ ion-header {
   margin-top: -100px;
   padding-top: 100px;
   padding-bottom: 20px;
-  background: rgba(84,160,232,1);
-  background: -moz-linear-gradient(-45deg, rgba(84,160,232,1) 0%, rgba(35,107,184,1) 100%);
-  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(84,160,232,1)), color-stop(100%, rgba(35,107,184,1)));
-  background: -webkit-linear-gradient(-45deg, rgba(84,160,232,1) 0%, rgba(35,107,184,1) 100%);
-  background: -o-linear-gradient(-45deg, rgba(84,160,232,1) 0%, rgba(35,107,184,1) 100%);
-  background: -ms-linear-gradient(-45deg, rgba(84,160,232,1) 0%, rgba(35,107,184,1) 100%);
-  background: linear-gradient(135deg, rgba(84,160,232,1) 0%, rgba(35,107,184,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54a0e8', endColorstr='#236bb8', GradientType=1 );
+  background: rgba(87,101,253,1);
+  background: -moz-linear-gradient(top, rgba(87,101,253,1) 0%, rgba(60,75,214,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(87,101,253,1)), color-stop(100%, rgba(60,75,214,1)));
+  background: -webkit-linear-gradient(top, rgba(87,101,253,1) 0%, rgba(60,75,214,1) 100%);
+  background: -o-linear-gradient(top, rgba(87,101,253,1) 0%, rgba(60,75,214,1) 100%);
+  background: -ms-linear-gradient(top, rgba(87,101,253,1) 0%, rgba(60,75,214,1) 100%);
+  background: linear-gradient(to bottom, rgba(87,101,253,1) 0%, rgba(60,75,214,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5765fd', endColorstr='#3c4bd6', GradientType=0 );
+}
+
+.box-datepicker {
+  padding: 20px 16px;
+
+  ion-row {
+    ion-col {
+      .button-datepicker {
+        width: 100%;
+        height: 46px;
+        border-radius: 46px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        border: 1px solid var(--ion-color-grey-300);
+
+        .label {
+          width: 100%;
+          font-size: 13px;
+          padding-left: 50px;
+          display: block;
+          color: var(--ion-color-grey-600);
+        }
+
+        .value {
+          width: 100%;
+          font-size: 14px;
+          padding-left: 50px;
+          display: block;
+          font-weight: bold;
+          color: var(--ion-color-grey-800);
+        }
+
+        ion-icon {
+          top: 12px;
+          left: 18px;
+          font-size: 20px;
+          margin-right: 8px;
+          position: absolute;
+          color: var(--ion-color-tertiary);
+        }
+      }
+    }
+  }
 }

@@ -10,9 +10,11 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let year of years" (click)="select(year)" [class.current]="year === currentYear" id="{{ year }}">
-      <ion-label>{{ year }}</ion-label>
-    </ion-item>
-  </ion-list>
+  <div class="box-list">
+    <ion-list>
+      <ion-item *ngFor="let year of years" (click)="select(year)" [class.current]="year === currentYear" id="{{ year }}">
+        <ion-label>{{ year }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

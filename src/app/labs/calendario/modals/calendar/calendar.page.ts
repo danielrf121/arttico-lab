@@ -84,6 +84,12 @@ export class CalendarPage implements OnInit {
   initYearList: any
   selectYearList: any[] = [];
 
+  /**
+   * Tamanho da grid do calendario
+   */
+  gridCalendar: any;
+  heightDate: any;
+
   constructor(
     public modalController: ModalController
   ) { }
@@ -111,6 +117,11 @@ export class CalendarPage implements OnInit {
     if (this.datePopulate) {
       this.dateSelected = this.datePopulate;
     }
+
+    setTimeout(() => {
+      this.gridCalendar = document.getElementById('calendar-dates');
+      this.heightDate = this.gridCalendar.offsetWidth / 7;
+    });
   }
 
   /**

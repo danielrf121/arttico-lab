@@ -28,8 +28,8 @@
       <div class="col-date">Sex</div>
       <div class="col-date">Sab</div>
     </div>
-    <div class="calendar-dates">
-      <div *ngFor="let lastDay of daysInLastMonth" class="col-date last-month">
+    <div class="calendar-dates" id="calendar-dates">
+      <div *ngFor="let lastDay of daysInLastMonth" class="col-date last-month" [ngStyle]="{ 'height': heightDate + 'px' }">
         <div class="content-day">
           <span>{{ lastDay }}</span>
         </div>
@@ -43,6 +43,7 @@
         [class.end-date]="day.endDate"
         [class.selected]="day.selected"
         [class.disabled]="day.disabled"
+        [ngStyle]="{ 'height': heightDate + 'px' }"
       >
         <div class="content-day">
           <div class="box-label">
@@ -50,7 +51,7 @@
           </div>
         </div>
       </div>
-      <div *ngFor="let nextDay of daysInNextMonth" class="col-date next-month">
+      <div *ngFor="let nextDay of daysInNextMonth" class="col-date next-month" [ngStyle]="{ 'height': heightDate + 'px' }">
         <div class="content-day">
           <div class="box-label">
             <span>{{ nextDay }}</span>

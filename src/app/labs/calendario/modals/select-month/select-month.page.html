@@ -10,9 +10,11 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let month of months" (click)="select(month)">
-      <ion-label>{{ month.name }}</ion-label>
-    </ion-item>
-  </ion-list>
+  <div class="box-list">
+    <ion-list>
+      <ion-item *ngFor="let month of months" (click)="select(month)">
+        <ion-label>{{ month.name }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
