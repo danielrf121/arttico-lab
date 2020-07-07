@@ -14,6 +14,10 @@ const routes: Routes = [
     path: 'calendario',
     loadChildren: () => import('./labs/calendario/calendario/calendario.module').then( m => m.CalendarioPageModule)
   },
+  {
+    path: 'scroll-profile',
+    loadChildren: () => import('./labs/scroll-profile/scroll-profile.module').then( m => m.ScrollProfilePageModule)
+  },
 ];
 @NgModule({
   imports: [
