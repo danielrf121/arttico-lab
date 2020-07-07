@@ -9,6 +9,7 @@ export class ScrollProfilePage implements OnInit {
 
   leftAvatar = 50;
   scaleAvatar = 1;
+  topBanner = 0;
   fixedAvatar = false;
 
   constructor() { }
@@ -22,12 +23,8 @@ export class ScrollProfilePage implements OnInit {
    * @param event 
    */
   onScroll(event: any) {
-    console.log('>>>>>>>', event);
-    console.log('>>>>>>>', event.detail.scrollTop);
-
     // Animação ocorre somente nesse range de scroll
     if (event.detail.scrollTop <= 136) {
-      console.log('animate');
 
       this.fixedAvatar = false;
 
@@ -43,5 +40,8 @@ export class ScrollProfilePage implements OnInit {
     } else {
       this.fixedAvatar = true;
     }
+
+    // Parallax do banner
+    this.topBanner = 0 + (event.detail.scrollTop / 2);
   }
 }

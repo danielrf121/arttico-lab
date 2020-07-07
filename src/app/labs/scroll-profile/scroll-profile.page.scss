@@ -30,11 +30,33 @@ ion-header {
   position: relative;
   background-color: lightseagreen;
 
+  .box-banner {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    position: absolute;
+
+    .banner-parallax {
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      position: absolute;
+      background-image: url('../../../assets/images/scroll-parallax/montain.jpg');
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
   .avatar {
     width: 80px;
     height: 80px;
     bottom: -40px;
     left: 50%;
+    font-size: 26px;
     margin-left: -40px;
     border-radius: 50%;
     border: 1px solid #fff;
@@ -55,4 +77,15 @@ ion-header {
 
 .box-content {
   padding: 40px 16px 20px 16px;
+
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--ion-color-grey-900);
+  }
+
+  p {
+    font-size: 16px;
+    color: var(--ion-color-grey-700);
+  }
 }

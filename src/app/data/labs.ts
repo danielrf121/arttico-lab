@@ -4,10 +4,10 @@ export const labs = [
   {
     id: 3,
     name: 'Arttico Labs',
-    description: 'Efeito de scroll em tela d eperfil',
+    description: 'Efeito de scroll e banner parallax',
     date: '06 de Julho de 2020',
     category: categories[0],
-    icon: 'assets/images/labs/calendario.png',
+    icon: 'assets/images/labs/scroll-mountain.png',
     url: 'scroll-profile',
   },
   {
